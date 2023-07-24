@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    background-image: url("./background.jpeg");
+    background-size: cover;
+    height: 100vh;
+}
+
+#hamburger-button i {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: font-size 0.1s linear;
+}
+
+#hamburger-button i:hover {
+    font-size: 32px
+}
+
+#sidebar-menu {
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: left 0.3s linear;
+}
+
+#sidebar-menu #logo {
+    position: absolute;
+    width: 100%;
+    line-height: 65px;
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+#sidebar-menu #logo a {
+    position: absolute;
+    left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#sidebar-menu #close-button i {
+    color: #fefefe;
+    font-size: 24px;
+    line-height: 65px;
+    position: absolute;
+    left: 270px;
+    cursor: pointer;
+    opacity: 0;
+    transition: font-size 0.1s linear;
+}
+
+#sidebar-menu #close-button i:hover {
+    font-size: 26px;
+}
+
+#sidebar-menu #menu {
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+#sidebar-menu #menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+#sidebar-menu #menu li:hover {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+#sidebar-menu #menu i,
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#sidebar-menu #menu i {
+    padding-right: 8px;
+}
+
+#sidebar-menu #social-media {
+    position: absolute;
+    left: 25%;
+    bottom: 40px;
+}
+
+#sidebar-menu #social-media i {
+    color: white;
+    opacity: 0.7;
+    padding: 0 5px;
+}
+
+#sidebar-menu #social-media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~#sidebar-menu {
+    left: 0;
+}
+
+#checkbox:checked~#hamburger-button i {
+    opacity: 0;
+}
+
+#checkbox:checked~#sidebar-menu #close-button i {
+    opacity: 1;
+}
